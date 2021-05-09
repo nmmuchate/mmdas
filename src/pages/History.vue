@@ -1,7 +1,13 @@
 <template>
   <q-page>
     <div>
-      <h4>História da Manjor MDA & Serviços</h4>
+      <transition
+        appear
+        @before-enter="beforeEnter"
+        @enter="enter"
+      >
+        <h4>História da Manjor MDA & Serviços</h4>
+      </transition>
       <h6><b>2017</b></h6>
       <p>A Manjor MDA & Serviços foi criada em 2017 pelo seu fundador Yane Pedro, na qual primeiramente comercializava produtos e artigos de estética e design visual. As vendas destes produtos eram feitas ao domicílio, de tal forma que se disponilibizava o produto mediante o pedido do cliente. E durante a trajectória destas actividades verificou-se uma maior demanda dos nossos produtos e uma maior aproximação e satisfação dos clientes que originou uma incapacidade de resposta a nível da demanda. E assim surgiu a ideia de se integrar outros membros na equipe para a gestão de actividades nos negócios, e houve também a necessidade de se participar em feiras e outros eventos de negócios como forma de dar resposta a exigência do mercado e estar ao nível da concorrência.</p>
       <br>
@@ -26,9 +32,28 @@
 </template>
 
 <script>
-export default {
-
-}
+  import gsap from 'gsap'
+  export default {
+    data(){
+      const beforeEnter = (el) => {
+        console.log('anter de clicar no enter')
+        el.style.transform = 'translateY(-50px)'
+        el.style.opacity = 0
+      }
+      const enter = (el) => {
+        console.log('no clique do enter')
+        gsap.to(el, {
+          duration: 0.7,
+          y: 0,
+          opacity: 1
+        })
+      }
+      return{
+        beforeEnter,
+        enter
+      }
+    }
+  }
 </script>
 
 <style>

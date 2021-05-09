@@ -1,7 +1,13 @@
 <template>
   <q-page>
     <div>
-      <h4>Nossos serviços e produtos</h4>
+      <transition
+        appear
+        @before-enter="beforeEnter"
+        @enter="enter"
+      >
+        <h4>Nossos serviços e produtos</h4>
+      </transition>
       <p>Criamos e implementamos um conjunto de plataformas que visam o entendimento e a gestão do relacionamento entre uma empresa e seus clientes actuais e potenciais, com o objectivo de aumentar a percepção do valor da marca e a rentabilidade da empresa ao longo do tempo</p> <br>
       <b>Oferecemos os seguintes serviços:</b>
       <ol>
@@ -52,7 +58,13 @@
     </div>
     <br>
     <div>
-      <h4>Objectivos da Manjor MDA & Serviços no mercado</h4>
+      <transition
+        appear
+        @before-enter="beforeEnter"
+        @enter="enter"
+      >
+        <h4>Objectivos da Manjor MDA & Serviços no mercado</h4>
+      </transition>
       <p>A Manjor MDA & Serviços ambiciona trabalhar com os seus clientes (empresas/ empreendedores) no crescimento dos seus negócios e no alcance dos seus objectivos, de maneira que apoiamos a estes, ajudando-os a atingir um público distinto, informando, influenciando e lembrando-lhes dos benefícios, vantagens e singularidade das marcas que representamos, e permitindo também com que se possa:</p>
       <ul>
         <li>Aumentar a captação e fidelização do volume de clientes para as empresas/empreendedores</li>
@@ -68,9 +80,28 @@
 </template>
 
 <script>
-export default {
-
-}
+  import gsap from 'gsap'
+  export default {
+    data() {
+      const beforeEnter = (el) => {
+        console.log('anter de clicar no enter')
+        el.style.transform = 'translateY(-50px)'
+        el.style.opacity = 0
+      }
+      const enter = (el) => {
+        console.log('no clique do enter')
+        gsap.to(el, {
+          duration: 0.7,
+          y: 0,
+          opacity: 1
+        })
+      }
+      return{
+        beforeEnter,
+        enter
+      }
+    },
+  }
 </script>
 <style>
 

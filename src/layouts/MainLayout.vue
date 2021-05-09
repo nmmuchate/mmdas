@@ -5,6 +5,7 @@
           <div class="row constrain">
             <div class="col-3">
               <q-btn
+                icon-right="navigate_next"
                 to="/about"
                 class="btn"
                 flat
@@ -12,6 +13,7 @@
             </div>
             <div class="col-3">
               <q-btn
+                icon-right="navigate_next"
                 to="/history"
                 class="btn"
                 flat
@@ -19,6 +21,7 @@
             </div>
              <div class="col-3">
               <q-btn
+                icon-right="navigate_next"
                 to="/service"
                 class="btn"
                 flat
@@ -26,6 +29,7 @@
             </div>
              <div class="col-3">
               <q-btn
+                icon-right="navigate_next"
                 to="/team"
                 class="btn"
                 flat
@@ -33,9 +37,6 @@
             </div>
           </div>
     </q-header>
-    <!-- <q-footer>
-      hjsdkhlf
-    </q-footer> -->
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -45,6 +46,11 @@
 <script>
 export default {
   name: 'MainLayout',
+  computed: {
+    pathChoice(){
+
+    }
+  },
   methods: {
     scrolled(){
       let prevScrollpos = window.pageYOffset;
