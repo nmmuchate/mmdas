@@ -94,6 +94,6 @@ export default {
 }
 .btn:hover{
   background: #fefefe;
-  color: #42a5f5;
+  color: #161a1d;
 }
 </style>

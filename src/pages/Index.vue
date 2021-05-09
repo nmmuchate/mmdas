@@ -1,6 +1,9 @@
 <template>
-  <q-page>
-      <div id="my-h4">
+  <q-page class="page">
+    <div class="q-pa-none">
+      <carousel/>
+    </div>
+      <div class="q-ma-none" id="my-h4">
     <transition
       appear
       @before-enter="beforeEnter"
@@ -81,5 +84,13 @@
         enter
       }
     },
+    components: {
+      'carousel' : () => import('components/Carousel.vue')
+    }
   }
 </script>
+<style>
+  page{
+    min-height: 420px;
+  }
+</style>
