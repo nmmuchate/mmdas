@@ -2,8 +2,17 @@
   <q-layout class="constrain" view="lHh Lpr lFf">
     <q-header id="my-header" v-scroll="scrolled()" >
           <!-- Manjor MDA & Serviços -->
-          <div class="row constrain">
-            <div class="col-3">
+          <div class="row q-pt-md constrain">
+            <div class="col">
+              <q-btn
+                v-if="navigationBarBlockButton"
+                icon="chevron_left"
+                to="/"
+                class="btn"
+                flat
+                label="voltar" />
+            </div>
+            <div class="col">
               <q-btn
                 icon-right="navigate_next"
                 to="/about"
@@ -11,7 +20,7 @@
                 flat
                 label="Sobre" />
             </div>
-            <div class="col-3">
+            <div class="col">
               <q-btn
                 icon-right="navigate_next"
                 to="/history"
@@ -19,7 +28,7 @@
                 flat
                 label="Historia" />
             </div>
-             <div class="col-3">
+             <div class="col">
               <q-btn
                 icon-right="navigate_next"
                 to="/service"
@@ -46,8 +55,19 @@
 <script>
 export default {
   name: 'MainLayout',
+  data() {
+    return {
+      showButton: true
+    }
+  },
   computed: {
-    pathChoice(){
+    navigationBarBlockButton(){
+      let currentPath = this.$route.fullPath
+      if (currentPath == '/') return !this.showButton
+      else if(currentPath == '/about') return this.showButton
+      else if(currentPath == '/history') return this.showButton
+      else if(currentPath == '/service') return this.showButton
+      else if(currentPath == '/team') return this.showButton
 
     }
   },
@@ -59,7 +79,7 @@ export default {
         if (prevScrollpos > currentScrollPos) {
           document.getElementById("my-header").style.top = "0";
         } else {
-          document.getElementById("my-header").style.top = "-180px";
+          document.getElementById("my-header").style.top = "-75px";
         }
         prevScrollpos = currentScrollPos;
       }
@@ -69,9 +89,7 @@ export default {
 </script>
 <style>
 #my-header{
-  height: 180px;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
+  height: 75px;
   transition: top 0.7s;
 }
 .btn:hover{
