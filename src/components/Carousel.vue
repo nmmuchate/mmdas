@@ -2,18 +2,19 @@
   <q-page>
     <div class="q-pa-md">
       <q-carousel
-        autoplay="3500"
+        :autoplay="3500"
         animated
         v-model="slide"
         arrows
         navigation
         infinite
         class="carousel"
-        >
+      >
         <q-carousel-slide :name="1" img-src="majorallachatado.jpg" />
         <q-carousel-slide :name="2" img-src="ku9a1090.jpg" />
+        <q-carousel-slide :name="3" img-src="mmdas.jpg" />
       </q-carousel>
-  </div>
+    </div>
   </q-page>
 </template>
 
