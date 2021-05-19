@@ -10,8 +10,6 @@
         </transition>
         <h6><b>2017</b></h6>
         <p>A Manjor MDA & Serviços foi criada em 2017 pelo seu fundador Yane Pedro, na qual primeiramente comercializava produtos e artigos de estética e design visual. As vendas destes produtos eram feitas ao domicílio, de tal forma que se disponilibizava o produto mediante o pedido do cliente. E durante a trajectória destas actividades verificou-se uma maior demanda dos nossos produtos e uma maior aproximação e satisfação dos clientes que originou uma incapacidade de resposta a nível da demanda. E assim surgiu a ideia de se integrar outros membros na equipe para a gestão de actividades nos negócios, e houve também a necessidade de se participar em feiras e outros eventos de negócios como forma de dar resposta a exigência do mercado e estar ao nível da concorrência.</p>
-      </div>
-      <div class="animate__animated animate__fadeInLeft">
         <br>
         <h6><b>2018</b></h6>
         <p>No ano de 2018, a Manjor MDA & Serviços notou um graduável crescimento em vendas e um elevado engajamento nos eventos de negócios que participou por conta dos produtos e das estratégias de marketing e vendas que foram implementadas nos projectos, permitindo a  atracção de vários clientes. E com isso, deu-se origem a uma nova ideia de elaboração dum projecto que consistia na concepção de eventos de negócios produzidos pela Manjor MDA & Serviços, que permitisse atender a um público maior e reduzir o índice da concorrência nas vendas dos produtos, pois,  produzindo este evento podia se expor e vender os produtos que quisesse sem se preocupar com a concorrência e havia a possibilidade de dar espaço e receber outros potenciais expositores e parceiros no evento. <br>

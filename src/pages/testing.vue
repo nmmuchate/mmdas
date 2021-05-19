@@ -2,6 +2,7 @@
   <div class="q-pa-md">
     <q-carousel
       v-model="slide"
+      :autoplay="4500"
       vertical
       transition-prev="slide-down"
       transition-next="slide-up"
