@@ -3,7 +3,8 @@
     <div class="q-pa-none">
       <carousel/>
     </div>
-      <div class="q-ma-none" id="my-h4">
+    <section>
+      <div class="q-ma-none" data-aos="fade-right" id="my-h4">
     <transition
       appear
       @before-enter="beforeEnter"
@@ -17,6 +18,8 @@
         Ao solicitar uma cotação ou projeto, garante uma análise e comparação cuidada que oferece ao cliente os melhores serviços, produtos e soluções para cada necessidade.
         A Manjor MDA & Serviços encontra-se ao dispor do cliente, basta para isso contactá-la e visitar a sua página electrónica.</p>
       </div>
+    </section>
+    <section>
       <div>
         <transition
           appear
@@ -58,12 +61,18 @@
           </div>
         </div>
       </div>
+    </section>
 
   </q-page>
 </template>
 
 <script>
   import gsap  from "gsap";
+  import AOS from 'aos'
+  import 'aos/dist/aos.css'
+
+
+  AOS.init()
   export default {
     data() {
       const beforeEnter = (el) => {
@@ -90,7 +99,26 @@
   }
 </script>
 <style>
-  page{
+  /* page{
     min-height: 420px;
+  } */
+
+  section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section:nth-child(1){
+    color: #fff;
+  }
+
+  section:nth-child(2){
+    color: #1D212B;
+  }
+  .imgBox{
+    width: 120px;
+    height: 120px;
   }
 </style>

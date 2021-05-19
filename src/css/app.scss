@@ -1,13 +1,16 @@
 // app global css in SCSS form
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  color: #687281;
+  font-family: 'Barlow', sans-serif;;
+  color: #6c83a5;
   line-height: 1.5;
   font-size: 1rem;
   text-align: left;
-  background: #ffffff;
+  background: #fff;
 }
 
 h4 {

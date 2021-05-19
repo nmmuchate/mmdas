@@ -10,6 +10,7 @@
       </transition>
       <p>A Equipe da Manjor MDA & Serviços é experiente na criação, avaliação, implementação e gestão de campanhas e programas de incentivos e motivação. Os membros desta equipe têm o cuidado de criar soluções inovadoras, que representam uma marca distinta em relação à sua qualidade e fiabilidade na construção duma relação entre a empresa e o cliente. Desde logo foi uma preocupação encontrar uma rede de pessoal especializado para a gestão dos projectos e poder assegurar aos nossos clientes uma assistência técnica e profissional. Alguns anos passaram desde a nossa primeira implementação do plano de negócios, e continuamos a produzir projectos tecnologicamente evoluídos e de alta qualidade.  Temos a flexibilidade de podermos produzir projectos e dar assistência nmà medida dos nossos clientes obedecendo sempre às suas exigências.</p>
       <p>A equipe técnica é constituida pelos seguintes membros:</p>
+
     </div>
     <div class="row">
       <div v-for="member in members" :key="member.name" class="col-4 q-pa-md">
@@ -21,8 +22,9 @@
                 font-size="50px"
                 text-color="white"
                 color="blue-1"
-                icon="person"
-              />
+              >
+                <img :src="member.teamImage" alt="">
+              </q-avatar>
             </q-item-section>
           </q-item>
           <q-item  class="justify-center text-center items-center">
@@ -65,31 +67,38 @@ export default {
       members: [
         {
           name: 'Yane Pedro',
-          jobPosition: 'Fundador e Gestor de projectos'
+          jobPosition: 'Fundador e Gestor de projectos',
+          teamImage: 'ku9a0940-min(1).jpg'
         },
         {
           name: 'Abgal Malafate',
-          jobPosition: 'Gestor Administrativo'
+          jobPosition: 'Gestor Administrativo',
+          teamImage: 'ku9a0947-min.jpg'
         },
         {
           name: 'Maika José',
-          jobPosition: 'Gestora de Finanças'
+          jobPosition: 'Gestora de Finanças',
+          teamImage: 'ku9a0990-1(1)-min.jpg'
         },
         {
           name: 'Carina Benedito',
-          jobPosition: 'Gestora de Recursos Humanos'
+          jobPosition: 'Gestora de Recursos Humanos',
+          teamImage: 'ku9a0938-min(1).jpg'
         },
         {
           name: 'Valter Langa',
-          jobPosition: 'Gestor de Marketing e Comunicação'
+          jobPosition: 'Gestor de Marketing e Comunicação',
+          teamImage: 'ku9a0976-min.jpg'
         },
         {
           name: 'Elsa Chomane',
-          jobPosition: 'Gestora Comercial'
+          jobPosition: 'Gestora Comercial',
+          teamImage: 'ku9a1013-min.jpg'
         },
         {
           name: 'Rose Miqui',
-          jobPosition: 'Gestora de Logística'
+          jobPosition: 'Gestora de Logística',
+          teamImage: 'ku9a1054-Recuperado-1(1)-min.jpg'
         }
       ]
     }
@@ -101,6 +110,8 @@ export default {
 .my-card {
   width: 250px;
   height: 250px;
+
+  transition: all 2s ease;
 }
 
 </style>
